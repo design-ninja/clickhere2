@@ -4,14 +4,20 @@
     padding: 3em;
     @include fadein;
 
-    @media screen and (max-width: $breakpoint-mobile-m) {
-        padding: 1.5em;
+    @media screen and (max-width: $breakpoint-mobile) {
+        padding: 2em 6%;
     }
 
     &_contact {
-        border-radius: 1em;
         background-color: $base-100;
         padding: 3em;
+        border-radius: 1em;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            background-color: $base-200;
+            padding: 0;
+            border-radius: 0;
+        }
     }
 }
 
@@ -21,11 +27,25 @@
     background-size: cover;
     background-repeat: no-repeat;
     color: $base-100;
-    min-height: 44rem;
+    min-height: 44em;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+        min-height: auto;
+    }
+
+    &__title {
+        @media screen and (max-width: $breakpoint-tablet) {
+            font-size: 1.5rem;
+        }
+    }
 
     &__label {
         opacity: 0.5;
         margin-bottom: 1em;
+
+        @media screen and (max-width: $breakpoint-tablet) {
+            font-size: 1rem;
+        }
     }
 
     &__text {
@@ -62,10 +82,6 @@
 }
 
 .logo {
-    @include button-reset;
-    @extend a;
-    text-align: left;
-
     &__image {
         display: inline-block;
         vertical-align: bottom;
@@ -118,7 +134,7 @@
 
         @media screen and (max-width: $breakpoint-tablet) {
             grid-template-columns: 1fr;
-            gap: 5%;
+            gap: 2em;
         }
     }
 }
@@ -168,7 +184,7 @@
 }
 
 .benefits {
-    padding: 3em;
+    padding: 6%;
     background-color: $primary-light;
     position: sticky;
     top: 3em;
@@ -190,6 +206,11 @@
 
     &__figure {
         margin-top: 2em;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            margin-top: 24%;
+            transform: scale(1.5);
+        }
     }
 }
 
@@ -212,6 +233,7 @@
     vertical-align: middle;
     width: 32px;
     height: 32px;
+    flex: none;
 
     &_check {
         background: url("../img/icons/check.svg") no-repeat center;
@@ -221,6 +243,10 @@
 .contact {
     background-color: $base-200;
     padding: 3em;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        padding: 1.5em;
+    }
 
     &__contacts {
         display: flex;
@@ -243,6 +269,11 @@
     color: $base-100;
     gap: 1em;
     padding: 1.5em 2em;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
     &__copyright {
         opacity: 0.5;
