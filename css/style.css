@@ -270,6 +270,7 @@ textarea {
   display: flex;
   gap: 1em;
   align-items: center;
+  overflow-x: auto;
 }
 .services__service {
   display: flex;
@@ -487,6 +488,12 @@ textarea {
   font-family: "Cera Pro", sans-serif;
   font-weight: 500;
   transition: opacity 0.2s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.button span {
+  white-space: nowrap;
 }
 .button img {
   filter: invert(34%) sepia(98%) saturate(1468%) hue-rotate(202deg) brightness(97%) contrast(98%);
