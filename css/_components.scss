@@ -102,28 +102,6 @@
     }
 }
 
-.button {
-    @include button-reset;
-    background-color: $primary;
-    color: $base-100;
-    cursor: pointer;
-    padding: 1.15em 2em;
-    text-align: center;
-    border-radius: 2em;
-    font-family: $font-title;
-    font-weight: 500;
-    transition: opacity .2s ease-in-out;
-
-    &:hover {
-        opacity: 0.9;
-    }
-
-    &_secondary {
-        background-color: $base-100;
-        color: $primary;
-    }
-}
-
 .layout {
 
     &_2col {
@@ -151,6 +129,13 @@
         @media screen and (max-width: $breakpoint-tablet) {
             grid-template-columns: 1fr;
         }
+    }
+
+    &__selector {
+        margin-top: 2em;
+        display: flex;
+        gap: 1em;
+        align-items: center;
     }
 
     &__service {
@@ -225,18 +210,6 @@
         align-items: center;
         margin-bottom: 1em;
         gap: 1em;
-    }
-}
-
-.icon {
-    display: inline-block;
-    vertical-align: middle;
-    width: 32px;
-    height: 32px;
-    flex: none;
-
-    &_check {
-        background: url("../img/icons/check.svg") no-repeat center;
     }
 }
 

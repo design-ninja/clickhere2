@@ -1,0 +1,11 @@
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    flex: none;
+
+    &_check {
+        background: url("../img/icons/check.svg") no-repeat center;
+    }
+}

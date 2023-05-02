@@ -133,6 +133,10 @@ input::placeholder, textarea::placeholder {
   color: hsl(240, 8%, 70%);
 }
 
+textarea {
+  resize: vertical;
+}
+
 .container {
   max-width: 1320px;
   margin: 0 auto;
@@ -234,41 +238,6 @@ input::placeholder, textarea::placeholder {
   }
 }
 
-.button {
-  border: none;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  overflow: visible;
-  background: transparent;
-  /* inherit font & color from ancestor */
-  color: inherit;
-  font: inherit;
-  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
-  line-height: normal;
-  /* Corrects font smoothing for webkit */
-  -webkit-font-smoothing: inherit;
-  -moz-osx-font-smoothing: inherit;
-  /* Corrects inability to style clickable `input` types in iOS */
-  -webkit-appearance: none;
-  background-color: hsl(215, 90%, 55%);
-  color: hsl(240, 8%, 100%);
-  cursor: pointer;
-  padding: 1.15em 2em;
-  text-align: center;
-  border-radius: 2em;
-  font-family: "Cera Pro", sans-serif;
-  font-weight: 500;
-  transition: opacity 0.2s ease-in-out;
-}
-.button:hover {
-  opacity: 0.9;
-}
-.button_secondary {
-  background-color: hsl(240, 8%, 100%);
-  color: hsl(215, 90%, 55%);
-}
-
 .layout_2col {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -295,6 +264,12 @@ input::placeholder, textarea::placeholder {
   .services__grid {
     grid-template-columns: 1fr;
   }
+}
+.services__selector {
+  margin-top: 2em;
+  display: flex;
+  gap: 1em;
+  align-items: center;
 }
 .services__service {
   display: flex;
@@ -362,17 +337,6 @@ input::placeholder, textarea::placeholder {
   align-items: center;
   margin-bottom: 1em;
   gap: 1em;
-}
-
-.icon {
-  display: inline-block;
-  vertical-align: middle;
-  width: 32px;
-  height: 32px;
-  flex: none;
-}
-.icon_check {
-  background: url("../img/icons/check.svg") no-repeat center;
 }
 
 .contact {
@@ -480,4 +444,68 @@ input::placeholder, textarea::placeholder {
 .tab__checkbox:checked ~ .tab__content {
   max-height: 100vh;
   padding: 1em;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  flex: none;
+}
+.icon_check {
+  background: url("../img/icons/check.svg") no-repeat center;
+}
+
+.button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(215, 90%, 55%);
+  color: hsl(240, 8%, 100%);
+  cursor: pointer;
+  padding: 1em 2em;
+  text-align: center;
+  border-radius: 2em;
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 500;
+  transition: opacity 0.2s ease-in-out;
+}
+.button img {
+  filter: invert(34%) sepia(98%) saturate(1468%) hue-rotate(202deg) brightness(97%) contrast(98%);
+}
+.button:hover {
+  opacity: 0.9;
+}
+.button_secondary {
+  background-color: hsl(240, 8%, 100%);
+  color: hsl(215, 90%, 55%);
+}
+.button_icon {
+  padding-left: 1.5em;
+  color: hsl(240, 8%, 10%);
+}
+.button_selected {
+  color: hsl(240, 8%, 100%);
+  background-color: hsl(215, 90%, 55%);
+}
+.button_selected img {
+  filter: invert(1);
 }/*# sourceMappingURL=style.css.map */

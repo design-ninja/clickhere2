@@ -33,3 +33,7 @@ input, textarea {
         color: $base-400;
     }
 }
+
+textarea {
+    resize: vertical;
+}
