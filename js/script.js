@@ -200,3 +200,32 @@ function sendEmailUsingMailto(event) {
   const mailtoLink = `mailto:test@email.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
   window.open(mailtoLink);
 }
+
+
+// Hambuger menu
+
+document.addEventListener('DOMContentLoaded', function() {
+  var hamburger = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('hamburger_cross');
+    mobileMenu.classList.toggle('mobile-menu_open');
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  var mobileMenuLinks = document.querySelectorAll('[data-target]');
+
+  mobileMenuLinks.forEach(function(link) {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      var targetId = link.getAttribute('data-target');
+      var targetElement = document.getElementById(targetId);
+
+      scrollTo(targetElement);
+      hamburger.classList.remove('hamburger_cross');
+      mobileMenu.classList.remove('mobile-menu_open');
+    });
+  });
+});

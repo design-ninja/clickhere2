@@ -21,7 +21,7 @@
         <img class="logo__image" src="img/logo_inverted.svg" alt="clickhere" />
         <h5 class="logo__label">Perfectly tailored software development process</h5>
       </div>
-      <div class="header__menu">
+      <div class="header__menu" id="headerMenu">
         <a class="header__menu-link" id="toAbout">About</a>
         <a class="header__menu-link" id="toServices">Services</a>
         <a class="header__menu-link" id="toJobs">We are hiring</a>
@@ -29,7 +29,22 @@
           Contact us
         </button>
       </div>
+      <div class="hamburger" id="hamburger">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </div>
     </header>
+    <div class="mobile-menu" id="mobileMenu">
+      <nav class="mobile-menu__nav">
+        <a class="mobile-menu__link" data-target="about" id="mobileToAbout">About</a>
+        <a class="mobile-menu__link" data-target="services" id="mobileToServices">Services</a>
+        <a class="mobile-menu__link" data-target="jobs" id="mobileToJobs">We are hiring</a>
+        <a class="button button_primary mobile-menu__contact" data-target="contact" id="mobileToContact">
+          Contact us
+        </a>
+      </nav>
+    </div>
     <div class="container">
       <div class="layout layout_2col">
         <div class="layout__content">
