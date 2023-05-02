@@ -187,15 +187,15 @@
           </div>
         </div>
         <div>
-          <form class="contact__form">
+          <form class="contact__form" onsubmit="sendEmailUsingMailto(event)">
             <input type="text" id="name" name="name" placeholder="Name" required />
             <input type="email" id="email" name="email" placeholder="Email" required />
             <input type="text" id="subject" name="subject" placeholder="Subject" required />
             <textarea id="message" name="message" placeholder="Your message" required rows="8"></textarea>
-            <button class="button" onclick="action('cooperation')">
-              Send request
+            <button class="button" type="submit">
+                Send request
             </button>
-          </form>
+        </form>
         </div>
       </div>
     </div>

@@ -183,3 +183,20 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
+// Contact form
+
+function sendEmailUsingMailto(event) {
+  event.preventDefault();
+  const form = event.target;
+
+  // Получаем данные из формы
+  const formData = new FormData(form);
+  const subject = formData.get("subject");
+  const message = formData.get("message");
+
+  // Создаем mailto ссылку и открываем ее
+  const mailtoLink = `mailto:test@email.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+  window.open(mailtoLink);
+}
