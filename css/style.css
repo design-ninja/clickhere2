@@ -508,6 +508,7 @@ textarea {
 .button_icon {
   padding-left: 1.5em;
   color: hsl(240, 8%, 10%);
+  flex: none;
 }
 .button_selected {
   color: hsl(240, 8%, 100%);
