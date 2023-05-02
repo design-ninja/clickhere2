@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="favicon.png" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script type="text/javascript" src="js/script.js"></script>
+  <title>clickhere</title>
+</head>
+
+<body>
+  <section class="hero">
+    <header class="header">
+      <div class="logo__wrap">
+        <button class="logo" id="toJobs">
+          <img class="logo__image" src="img/logo_inverted.svg" alt="clickhere" />
+        </button>
+        <h5 class="logo__label">Perfectly tailored software development process</h5>
+      </div>
+      <div class="header__menu">
+        <a class="header__menu-link" href="#about">About</a>
+        <a class="header__menu-link" href="#services">Services</a>
+        <a class="header__menu-link" href="#jobs">We are hiring</a>
+        <button class="button button_secondary" onclick="action('info')">
+          Contact us
+        </button>
+      </div>
+    </header>
+    <div class="container">
+      <div class="layout layout_2col">
+        <div class="layout__content">
+          <h3 class="hero__label">ABOUT US</h3>
+          <h1>
+            Clickhere LTD is a software development company that specializes in creating innovative solutions to help
+            businesses thrive in the <nobr>digital age</nobr>.
+          </h1>
+        </div>
+        <div class="hero__text">
+          <p>
+            We're passionate about using technology to solve complex challenges and drive growth for our clients.
+          </p>
+          <p>
+            Our team of expert developers, designers, and project managers work together to create custom software
+            applications that are tailored to our clients' specific requirements. Whether you need a mobile app, a web
+            platform, or an enterprise solution, we've got you covered.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="services" id="services">
+    <div class="container">
+
+
+      <div class="layout__content">
+        <h2>Services</h2>
+        <div class="services__grid">
+          <div class="services__service services__service_orange">
+            <h3>User-Centered Design</h3>
+            <p>
+              We create websites that are intuitive and easy to navigate, with a focus on the user experience. Our
+              design process starts with understanding the target audience and their needs, preferences, and behaviors.
+            </p>
+          </div>
+          <div class="services__service services__service_green">
+            <h3>Responsive Design</h3>
+            <p>
+              We ensure that all websites we design are fully responsive and mobile-friendly, providing an optimal viewing experience on any device.
+            </p>
+          </div>
+          <div class="services__service services__service_blue">
+            <h3>Custom Design</h3>
+            <p>
+              We create custom website designs that are unique to each client, based on their brand identity, business objectives, and target audience.
+            </p>
+          </div>
+          <div class="services__service services__service_purple">
+            <h3>SEO-friendly Design</h3>
+            <p>
+              Our websites are designed with search engine optimization in mind, with an emphasis on clean code, fast loading times, and easy navigation.
+            </p>
+          </div>
+          <div class="services__service services__service_brown">
+            <h3>Content Management System Integration</h3>
+            <p>
+              We integrate content management systems (CMS) such as WordPress, Drupal, or Joomla into our designs.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="pyramid" id="pyramid">
+    <div class="container">
+      <h2>Our Workflow Pyramid</h2>
+      <img class="pyramid__figure" src="/img/pyramid.svg" alt="Pyramid" />
+    </div>
+  </section>
+  <section class="jobs" id="jobs">
+    <div class="container">
+      <div class="layout layout_2col">
+        <div class="layout__content">
+          <h2>We Are Hiring</h2>
+          <p class="subtitle">
+            Clickhere LTD is looking for people who are passionate about crafting phenomenal web and mobile
+            applications.
+          </p>
+          <div class="jobs">
+            <div class="tabs">
+              <div class="tab">
+                <input class="tab__checkbox" type="checkbox" id="tab1" />
+                <label class="tab__label" for="tab1">React Front End Developer</label>
+                <div class="tab__content">
+                  <p>
+                    As a Frontend Engineer you’ll use your extensive knowledge of JavaScript, HTML, and CSS to improve
+                    the
+                    Slack web client, a complex in-browser application relied upon by millions of users every day. You
+                    will work with real-time data streams, engineer for performance across browsers, and delight people
+                    by
+                    making the best software we can imagine.
+                  </p>
+                  <p>
+                    You will collaborate closely with Product, Design, Application Engineering, and QA to spec,
+                    conceptualize, build, test and deploy new features for our large (and growing!) user base.
+                  </p>
+                </div>
+              </div>
+              <div class="tab">
+                <input class="tab__checkbox" type="checkbox" id="tab2" />
+                <label class="tab__label" for="tab2">Devops Engineer</label>
+                <div class="tab__content">
+                  <p>
+                    As Devops Engineer you will be responsible for managing and automating the company's software
+                    delivery
+                    pipeline, ensuring the availability and reliability of the production environment, and collaborating
+                    with development teams to improve the speed and quality of our software releases.
+                  </p>
+                  <p>
+                    You will build and maintain the company's infrastructure on cloud platforms like AWS, Azure, or GCP.
+                    Your daily tasks will include automation of the infrastructure deployment and configuration
+                    management
+                    using tools like Terraform, Ansible, or Puppet as well as managing and optimizing the usage and cost
+                    of cloud resources.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="benefits">
+          <h4 class="title">What you get while working with us?</h4>
+          <ul class="list">
+            <li class="list__item">
+              <i class="icon icon_check"></i>
+              <span>Flexible working hours</span>
+            </li>
+            <li class="list__item">
+              <i class="icon icon_check"></i>
+              <span>Challenging tasks</span>
+            </li>
+            <li class="list__item">
+              <i class="icon icon_check"></i>
+              <span>Modern stack of technologies</span>
+            </li>
+            <li class="list__item">
+              <i class="icon icon_check"></i>
+              <span>Remote work</span>
+            </li>
+            <li class="list__item">
+              <i class="icon icon_check"></i>
+              <span>Competitive remuneration package</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contact">
+    <div class="container container_contact">
+
+      <div class="layout layout_2col">
+        <div class="contact__contacts">
+          <div>
+            <h2>Contact us</h2>
+            <p class="subtitle">
+              We reply within 48 hours on business days.
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>Address:</strong> 55 Gladstonos Street, Limassol, Cyprus, 3040
+            </p>
+            <p>
+              <strong>Contact:</strong> <a href="tel://+35799172931" title="Call us">+35799172931</a>
+            </p>
+          </div>
+        </div>
+        <div>
+          <form class="contact__form">
+            <input type="text" id="name" name="name" placeholder="Name" required />
+            <input type="email" id="email" name="email" placeholder="Email" required />
+            <input type="text" id="subject" name="subject" placeholder="Subject" required />
+            <textarea id="message" name="message" placeholder="Your message" required rows="8"></textarea>
+            <button class="button" onclick="action('cooperation')">
+              Send request
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <img class="logo__image" src="img/logo.svg" alt="clickhere" />
+    <small class="footer__copyright">©2023 Clickhere LTD. All rights reserved</small>
+  </footer>
+</body>
+
+</html>

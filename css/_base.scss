@@ -1,0 +1,35 @@
+body {
+    background-color: $base-100;
+    font-family: $font-body;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    cursor: pointer;
+    transition: opacity .2s ease-in-out;
+    text-decoration: none;
+    color: $primary;
+
+    &:hover {
+        opacity: .7;
+    }
+}
+
+input, textarea {
+    background-color: $base-100;
+    padding: 1em;
+    border: 1px solid $base-300;
+    border-radius: 0.5em;
+    font-family: inherit;
+    font-size: inherit;
+
+    &::placeholder {
+        color: $base-400;
+    }
+}
