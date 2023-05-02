@@ -10,9 +10,21 @@ window.onload = function() {
         });
         console
     }
+
+    document.getElementById("toAbout").addEventListener('click', () => {
+        scrollTo(document.getElementById("about"));
+    });
+
+    document.getElementById("toServices").addEventListener('click', () => {
+        scrollTo(document.getElementById("services"));
+    });
       
     document.getElementById("toJobs").addEventListener('click', () => {
         scrollTo(document.getElementById("jobs"));
+    });
+
+    document.getElementById("toContact").addEventListener('click', () => {
+        scrollTo(document.getElementById("contact"));
     });
   }
 
