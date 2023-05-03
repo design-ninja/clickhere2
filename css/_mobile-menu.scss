@@ -3,6 +3,7 @@
   cursor: pointer;
   position: relative;
   z-index: 20;
+  flex: none;
 }
 
 .mobile-menu {
@@ -56,7 +57,7 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $breakpoint-tablet) {
   .header__menu {
     display: none;
   }

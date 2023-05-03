@@ -105,11 +105,6 @@ small {
      -moz-user-select: none;
           user-select: none;
 }
-@media screen and (max-width: 860px) {
-  .header .button {
-    display: none;
-  }
-}
 .header__menu {
   display: flex;
   gap: 2em;
@@ -127,7 +122,7 @@ small {
   justify-content: flex-start;
   align-items: center;
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 1280px) {
   .logo {
     flex-direction: column;
     align-items: flex-start;
@@ -147,7 +142,7 @@ small {
   opacity: 0.7;
   text-transform: uppercase;
 }
-@media screen and (max-width: 427px) {
+@media screen and (max-width: 375px) {
   .logo__label {
     margin-top: 0.5em;
   }
@@ -161,12 +156,12 @@ small {
   color: hsl(240, 8%, 100%);
   min-height: 44em;
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 768px) {
   .hero {
     min-height: auto;
   }
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 768px) {
   .hero__title {
     font-size: 1.5rem;
   }
@@ -175,7 +170,7 @@ small {
   opacity: 0.5;
   margin-bottom: 1em;
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 768px) {
   .hero__label {
     font-size: 1rem;
   }
@@ -216,7 +211,7 @@ small {
   margin: 3em 0;
   grid-gap: 1em;
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 768px) {
   .services__grid {
     grid-template-columns: 1fr;
   }
@@ -262,23 +257,17 @@ small {
   background-size: cover;
   background-repeat: no-repeat;
   color: hsl(240, 8%, 100%);
-  padding: 3em;
+  padding: 2em 0;
 }
 .pyramid__figure {
   margin-top: 2em;
-}
-@media screen and (max-width: 600px) {
-  .pyramid__figure {
-    margin-top: 24%;
-    transform: scale(1.5);
-  }
 }
 
 .contact {
   background-color: hsl(220, 20%, 97%);
   padding: 3em;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .contact {
     padding: 1.5em;
   }
@@ -362,7 +351,7 @@ textarea {
   padding: 3em;
   animation: 1.5s ease-out 0s 1 fadein;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .container {
     padding: 2em 6%;
   }
@@ -372,7 +361,7 @@ textarea {
   padding: 3em;
   border-radius: 1em;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .container_contact {
     background-color: hsl(220, 20%, 97%);
     padding: 0;
@@ -386,7 +375,7 @@ textarea {
   gap: 8%;
   align-items: center;
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 768px) {
   .layout_2col {
     grid-template-columns: 1fr;
     gap: 2em;
@@ -472,6 +461,7 @@ textarea {
   background: url("../img/icons/check.svg") no-repeat center;
 }
 .icon_hamburger {
+  flex: none;
   background: rgba(23, 23, 28, 0.1);
   border-radius: 50%;
   padding: 0.75rem;
@@ -480,6 +470,7 @@ textarea {
   filter: invert(1);
 }
 .icon_close {
+  flex: none;
   background: rgba(23, 23, 28, 0.1);
   border-radius: 50%;
   padding: 0.75rem;
@@ -554,6 +545,7 @@ textarea {
   cursor: pointer;
   position: relative;
   z-index: 20;
+  flex: none;
 }
 
 .mobile-menu {

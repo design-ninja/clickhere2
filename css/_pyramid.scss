@@ -8,14 +8,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     color: $base-100;
-    padding: 3em;
+    padding: 2em 0;
 
     &__figure {
         margin-top: 2em;
-
-        @media screen and (max-width: $breakpoint-mobile) {
-            margin-top: 24%;
-            transform: scale(1.5);
-        }
     }
 }

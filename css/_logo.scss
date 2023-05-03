@@ -4,7 +4,7 @@
     justify-content: flex-start;
     align-items: center;
 
-    @media screen and (max-width: $breakpoint-tablet) {
+    @media screen and (max-width: $breakpoint-laptop-m) {
         flex-direction: column;
         align-items: flex-start;
         gap: 1em;
