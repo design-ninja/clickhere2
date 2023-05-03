@@ -1,0 +1,21 @@
+.pyramid {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 3em;
+    background-color: $primary;
+    background-image: url('../img/pyramid-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $base-100;
+    padding: 3em;
+
+    &__figure {
+        margin-top: 2em;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            margin-top: 24%;
+            transform: scale(1.5);
+        }
+    }
+}

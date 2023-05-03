@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    user-select: none;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+        .button {
+            display: none;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        gap: 2em;
+        align-items: center;
+        flex-wrap: wrap;
+
+        &-link {
+            color: $base-100;
+            font-weight: 500;
+        }
+    }
+}

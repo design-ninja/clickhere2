@@ -1,50 +1,19 @@
-
-// Scroll to Jobs section on header button click
-
-window.onload = function () {
-    scrollTo = (element) => {
-        window.scroll({
-            left: 0,
-            top: element.offsetTop,
-            behavior: "smooth"
-        });
-        console
-    }
-
-    document.getElementById("toAbout").addEventListener('click', () => {
-        scrollTo(document.getElementById("about"));
-    });
-
-    document.getElementById("toServices").addEventListener('click', () => {
-        scrollTo(document.getElementById("services"));
-    });
-
-    document.getElementById("toJobs").addEventListener('click', () => {
-        scrollTo(document.getElementById("jobs"));
-    });
-
-    document.getElementById("toContact").addEventListener('click', () => {
-        scrollTo(document.getElementById("contact"));
-    });
-}
-
-
 // Services selector
 
 function switchContent(contentId) {
-    const servicesGrid = document.querySelector('.services__grid');
-    const buttons = document.querySelectorAll('.services__selector .button');
+  const servicesGrid = document.querySelector('.services__grid');
+  const buttons = document.querySelectorAll('.services__selector .button');
 
-    buttons.forEach((button) => {
-        button.classList.remove('button_selected');
-        if (button.id === contentId) {
-            button.classList.add('button_selected');
-        }
-    });
+  buttons.forEach((button) => {
+    button.classList.remove('button_selected');
+    if (button.id === contentId) {
+      button.classList.add('button_selected');
+    }
+  });
 
-    switch (contentId) {
-        case 'web_design':
-            servicesGrid.innerHTML = `
+  switch (contentId) {
+    case 'web_design':
+      servicesGrid.innerHTML = `
 
           <div class="services__service services__service_orange">
           <h3>User-Centered Design</h3>
@@ -78,9 +47,9 @@ function switchContent(contentId) {
           </p>
         </div>
         `;
-            break;
-        case 'software_dev':
-            servicesGrid.innerHTML = `
+      break;
+    case 'software_dev':
+      servicesGrid.innerHTML = `
             <div class="services__service services__service_orange">
           <h3>Custom Software Development</h3>
           <p>
@@ -113,9 +82,9 @@ function switchContent(contentId) {
           </p>
         </div>
             `;
-            break;
-        case 'automation':
-            servicesGrid.innerHTML = `
+      break;
+    case 'automation':
+      servicesGrid.innerHTML = `
             <div class="services__service services__service_orange">
           <h3>Business Process Analysis</h3>
           <p>
@@ -141,9 +110,9 @@ function switchContent(contentId) {
           </p>
         </div>
             `;
-            break;
-        case 'data_analysis':
-            servicesGrid.innerHTML = `
+      break;
+    case 'data_analysis':
+      servicesGrid.innerHTML = `
             <div class="services__service services__service_orange">
           <h3>Data Modeling</h3>
           <p>
@@ -170,18 +139,18 @@ function switchContent(contentId) {
           </p>
         </div>
             `;
-            break;
-    }
+      break;
+  }
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    switchContent('web_design');
+  switchContent('web_design');
 
-    document.querySelectorAll('.services__selector .button').forEach((button) => {
-        button.addEventListener('click', () => {
-            switchContent(button.id);
-        });
+  document.querySelectorAll('.services__selector .button').forEach((button) => {
+    button.addEventListener('click', () => {
+      switchContent(button.id);
     });
+  });
 });
 
 
@@ -191,41 +160,64 @@ function sendEmailUsingMailto(event) {
   event.preventDefault();
   const form = event.target;
 
-  // Получаем данные из формы
   const formData = new FormData(form);
   const subject = formData.get("subject");
   const message = formData.get("message");
 
-  // Создаем mailto ссылку и открываем ее
   const mailtoLink = `mailto:test@email.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
   window.open(mailtoLink);
 }
 
+// Smooth scroll
+function scrollTo(targetElement) {
+  targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 
-// Hambuger menu
+// Hamburger menu
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   var hamburger = document.getElementById('hamburger');
   var mobileMenu = document.getElementById('mobileMenu');
+  // var body = document.querySelector('body');
+  var mobileMenuLinks = document.querySelectorAll('.mobile-menu__link');
 
-  hamburger.addEventListener('click', function() {
+  function toggleMobileMenu() {
+    var iconHamburger = document.querySelector('.icon_hamburger');
+    var iconClose = document.querySelector('.icon_close');
+
     hamburger.classList.toggle('hamburger_cross');
     mobileMenu.classList.toggle('mobile-menu_open');
-  });
-});
 
-document.addEventListener('DOMContentLoaded', function() {
-  var mobileMenuLinks = document.querySelectorAll('[data-target]');
+    if (mobileMenu.classList.contains('mobile-menu_open')) {
+      // if (window.innerWidth <= 767) {
+      //   body.classList.add('body_fixed');
+      // }
+      iconHamburger.style.display = 'none';
+      iconClose.style.display = 'inline-block';
+    } else {
+      // if (window.innerWidth <= 767) {
+      //   body.classList.remove('body_fixed');
+      // }
+      iconHamburger.style.display = 'inline-block';
+      iconClose.style.display = 'none';
+    }
+  }
 
-  mobileMenuLinks.forEach(function(link) {
-    link.addEventListener('click', function(event) {
+  hamburger.addEventListener('click', toggleMobileMenu);
+
+  mobileMenuLinks.forEach(function (link) {
+    link.addEventListener('click', function (event) {
       event.preventDefault();
-      var targetId = link.getAttribute('data-target');
-      var targetElement = document.getElementById(targetId);
-
+      var targetId = link.getAttribute('href');
+      var targetElement = document.querySelector(targetId);
+  
+      // if (window.innerWidth <= 767) {
+      //   body.classList.remove('body_fixed');
+      // }
+  
       scrollTo(targetElement);
-      hamburger.classList.remove('hamburger_cross');
-      mobileMenu.classList.remove('mobile-menu_open');
+  
+      toggleMobileMenu();
     });
   });
 });

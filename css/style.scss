@@ -5,9 +5,18 @@
 @import "mixins";
 @import "breakpoints";
 
+@import "header";
+@import "logo";
+@import "hero";
+@import "benefits";
+@import "services";
+@import "pyramid";
+@import "contact";
+@import "footer";
+
 @import "base";
 @import "components";
 @import "tabs";
 @import "icons";
 @import "buttons";
-@import "hamburger";
+@import "mobile-menu";

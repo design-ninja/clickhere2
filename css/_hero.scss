@@ -1,0 +1,33 @@
+.hero {
+    background-color: $primary;
+    background-image: url('../img/hero-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $base-100;
+    min-height: 44em;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+        min-height: auto;
+    }
+
+    &__title {
+        @media screen and (max-width: $breakpoint-tablet) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__label {
+        opacity: 0.5;
+        margin-bottom: 1em;
+
+        @media screen and (max-width: $breakpoint-tablet) {
+            font-size: 1rem;
+        }
+    }
+
+    &__text {
+        padding-top: 1em;
+        border-top: 2px solid $base-100;
+        max-width: 34em;
+    }
+}

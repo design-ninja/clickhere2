@@ -1,0 +1,26 @@
+.contact {
+    background-color: $base-200;
+    padding: 3em;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        padding: 1.5em;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    &__address {
+        font-family: $font-encrypted;
+        font-size: 0.95rem;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin: 2em 0;
+    }
+}

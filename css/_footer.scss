@@ -1,0 +1,12 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: $base-900;
+    color: $base-100;
+    gap: 1em;
+    padding: 1.5em 2em;
+
+    &__copyright {
+        opacity: 0.5;
+    }
+}

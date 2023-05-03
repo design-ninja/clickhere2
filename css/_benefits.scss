@@ -1,0 +1,22 @@
+.benefits {
+    padding: 6%;
+    background-color: $primary-light;
+    position: sticky;
+    top: 3em;
+    align-self: flex-start;
+    border-radius: 1em;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin: 2em 0;
+        margin-bottom: 0;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+        gap: 1em;
+    }
+}

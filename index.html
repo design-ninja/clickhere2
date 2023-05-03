@@ -22,27 +22,30 @@
         <h5 class="logo__label">Perfectly tailored software development process</h5>
       </div>
       <div class="header__menu" id="headerMenu">
-        <a class="header__menu-link" id="toAbout">About</a>
-        <a class="header__menu-link" id="toServices">Services</a>
-        <a class="header__menu-link" id="toJobs">We are hiring</a>
-        <button class="button button_secondary" id="toContact">
+        <a class="header__menu-link" href="#about">About</a>
+        <a class="header__menu-link" href="#services">Services</a>
+        <a class="header__menu-link" href="#jobs">We are hiring</a>
+        <a class="button button_secondary header__menu-link" href="#contact">
           Contact us
-        </button>
+        </a>
       </div>
       <div class="hamburger" id="hamburger">
-        <span class="hamburger__line"></span>
-        <span class="hamburger__line"></span>
-        <span class="hamburger__line"></span>
+        <img class="icon icon_hamburger" src="/img/icons/menu.svg">
+        <img class="icon icon_close" src="/img/icons/close.svg" style="display: none;">
       </div>
     </header>
     <div class="mobile-menu" id="mobileMenu">
       <nav class="mobile-menu__nav">
-        <a class="mobile-menu__link" data-target="about" id="mobileToAbout">About</a>
-        <a class="mobile-menu__link" data-target="services" id="mobileToServices">Services</a>
-        <a class="mobile-menu__link" data-target="jobs" id="mobileToJobs">We are hiring</a>
-        <a class="button button_primary mobile-menu__contact" data-target="contact" id="mobileToContact">
-          Contact us
-        </a>
+        <div class="mobile-menu__links">
+          <a class="mobile-menu__link" href="#about">About</a>
+          <a class="mobile-menu__link" href="#services">Services</a>
+          <a class="mobile-menu__link" href="#jobs">We are hiring</a>
+        </div>
+        <div class="mobile-menu__button">
+          <a class="mobile-menu__link button button_primary" href="#contact">
+            Contact us
+          </a>
+        </div>
       </nav>
     </div>
     <div class="container">
@@ -155,24 +158,24 @@
 
         <div class="benefits">
           <h4 class="title">What you get while working with us?</h4>
-          <ul class="list">
-            <li class="list__item">
+          <ul class="benefits__list">
+            <li class="benefits__item">
               <i class="icon icon_check"></i>
               <span>Flexible working hours</span>
             </li>
-            <li class="list__item">
+            <li class="benefits__item">
               <i class="icon icon_check"></i>
               <span>Challenging tasks</span>
             </li>
-            <li class="list__item">
+            <li class="benefits__item">
               <i class="icon icon_check"></i>
               <span>Modern stack of technologies</span>
             </li>
-            <li class="list__item">
+            <li class="benefits__item">
               <i class="icon icon_check"></i>
               <span>Remote work</span>
             </li>
-            <li class="list__item">
+            <li class="benefits__item">
               <i class="icon icon_check"></i>
               <span>Competitive remuneration package</span>
             </li>
@@ -194,7 +197,7 @@
           </div>
           <div>
             <p>
-              <strong>Address:</strong> 55 Gladstonos Street, Limassol, Cyprus, 3040
+              <strong>Address:</strong> <span class="contact__address">33 eYpPQxIgIQ QxzGGx,  mRkpQQIY, wLfzUQ, 0262</span>
             </p>
             <p>
               <strong>Contact:</strong> <a href="tel://+35799172931" title="Call us">+35799172931</a>
@@ -216,7 +219,6 @@
     </div>
   </section>
   <footer class="footer">
-    <img class="logo__image" src="img/logo.svg" alt="clickhere" />
     <small class="footer__copyright">©2023 Clickhere LTD. All rights reserved</small>
   </footer>
 </body>
