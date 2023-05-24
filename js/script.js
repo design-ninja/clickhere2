@@ -164,7 +164,7 @@ function sendEmailUsingMailto(event) {
   const subject = formData.get("subject");
   const message = formData.get("message");
 
-  const mailtoLink = `mailto:test@email.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+  const mailtoLink = `mailto:contact@cl-he.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
   window.open(mailtoLink);
 }
 
